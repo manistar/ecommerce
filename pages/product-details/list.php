@@ -40,13 +40,13 @@
                 -50%
               </div>
               <img alt="Card image cap" class="img-fluid mb-1"
-                src="../../app-assets/images/elements/fitbit-watch.png">
+                src="pages/shop/images/<?=$product_detail['img'];?>">
             </div>
           </div>
           <div class="col-sm-8 col-12">
             <div class="title-area clearfix">
               <h2 class="product-title float-left">
-                Fitbit Alta HR Special Edition
+              <?=$product_detail['title'];?>
               </h2>
               <span class="ratings float-right">
               </span>
@@ -67,30 +67,9 @@
             <!-- Product Information -->
             <div class="product-info">
               <p>
-                Chocolate cake croissant lollipop danish macaroon. Gummies candy jelly-o chocolate tart jelly-o sesame
-                snaps
-                jelly-o. Muffin cake dessert biscuit. Chupa chups jelly beans powder chocolate cake lollipop cake donut
-                toffee
-                sugar plum. Sweet roll liquorice halvah cupcake chocolate apple pie cheesecake pastry wafer. Cheesecake
-                cupcake
-                sugar plum apple pie.
+                <?=$product_detail['content'];?>
               </p>
-              <p>
-                Cotton candy bonbon halvah. Caramels sesame snaps sweet roll tart gummi bears. Lollipop cake chocolate
-                bar
-                chupa chups jujubes fruitcake. Croissant powder dessert toffee icing carrot cake icing croissant.Sweet
-                brownie
-                halvah topping chocolate. Macaroon lemon drops sugar plum cupcake cheesecake bear claw. Macaroon jujubes
-                oat
-                cake chupa chups dessert jelly beans. Biscuit lemon drops cupcake powder.
-              </p>
-              <p>
-                Croissant powder dessert toffee icing carrot cake icing croissant.Sweet brownie halvah topping
-                chocolate.
-                Macaroon lemon drops sugar plum cupcake cheesecake bear claw. Macaroon jujubes oat cake chupa chups
-                dessert
-                jelly beans.
-              </p>
+              
             </div>
             <!-- Product Information Ends-->
             <!-- Color Options -->
@@ -337,7 +316,7 @@
                 <div class="media">
                   <span class="media-left">
                     <img alt="Generic placeholder image" class="media-object"
-                      src="../../app-assets/images/portrait/small/avatar-s-1.png" width="64" height="64" />
+                      src="./app-assets/images/portrait/small/avatar-s-1.png" width="64" height="64" />
                   </span>
                   <div class="media-body">
                     <span class="ratings float-right">
@@ -361,7 +340,7 @@
                 <div class="media">
                   <span class="media-left">
                     <img alt="Generic placeholder image" class="media-object"
-                      src="../../app-assets/images/portrait/small/avatar-s-8.png" width="64" height="64" />
+                      src="./app-assets/images/portrait/small/avatar-s-8.png" width="64" height="64" />
                   </span>
                   <div class="media-body">
                     <span class="ratings float-right">
@@ -382,7 +361,7 @@
                 <div class="media">
                   <span class="media-left">
                     <img alt="Generic placeholder image" class="media-object"
-                      src="../../app-assets/images/portrait/small/avatar-s-6.png" width="64" height="64" />
+                      src="./app-assets/images/portrait/small/avatar-s-6.png" width="64" height="64" />
                   </span>
                   <div class="media-body">
                     <span class="ratings float-right">
@@ -457,7 +436,7 @@
                 <div class="media">
                   <span class="media-left">
                     <img alt="Generic placeholder image" class="media-object"
-                      src="../../app-assets/images/portrait/small/avatar-s-10.png" width="64" height="64" />
+                      src="./app-assets/images/portrait/small/avatar-s-10.png" width="64" height="64" />
                   </span>
                   <div class="media-body">
                     <h5 class="media-heading mb-0 text-bold-600">
@@ -479,7 +458,7 @@
                 <div class="media">
                   <span class="media-left">
                     <img alt="Generic placeholder image" class="media-object"
-                      src="../../app-assets/images/portrait/small/avatar-s-12.png" width="64" height="64" />
+                      src="./app-assets/images/portrait/small/avatar-s-12.png" width="64" height="64" />
                   </span>
                   <div class="media-body">
                     <h5 class="media-heading mb-0 text-bold-600">
@@ -500,7 +479,7 @@
                 <div class="media">
                   <span class="media-left">
                     <img alt="Generic placeholder image" class="media-object"
-                      src="../../app-assets/images/portrait/small/avatar-s-7.png" width="64" height="64" />
+                      src="./app-assets/images/portrait/small/avatar-s-7.png" width="64" height="64" />
                   </span>
                   <div class="media-body">
                     <h5 class="media-heading mb-0 text-bold-600">
