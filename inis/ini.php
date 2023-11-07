@@ -33,6 +33,7 @@
     $d->create_table("users", $users_form);
     // $userID = "68734855532";
     $product_data = $d->getall("products", fetch: "moredetails");
+    $product_cart = $d->getall("products", "ID = ?", [$ID], fetch: "moredetails");
     // var_dump($product_data->rowCount());
     if(isset($_GET['ID'])){
         $product_id = $_GET['ID'];

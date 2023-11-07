@@ -230,83 +230,11 @@
           <div class="product-content tab-content px-1 pt-1">
             <div aria-expanded="true" aria-labelledby="description" class="tab-pane active" id="desc" role="tabpanel">
               <h2 class="my-1">
-                Fitbit Alta HR Special Edition
+              <?=$product_detail['title'];?>
               </h2>
               <p>
-                Tootsie roll gingerbread dragée gummies candy tart. Danish dessert sweet roll icing dessert bonbon.
-                Brownie
-                sesame snaps pastry chocolate biscuit wafer tart. Candy canes gummies wafer donut chupa chups pudding
-                sweet
-                donut. Lollipop halvah dessert chocolate cake danish cake. Oat cake topping sweet chocolate muffin cake
-                pie
-                halvah. Topping danish fruitcake apple pie carrot cake. Pudding cupcake cupcake cotton candy croissant.
-                Pastry
-                pastry jelly beans powder dragée toffee wafer cupcake pastry. Sweet lemon drops lollipop croissant
-                bonbon.
-                Soufflé biscuit dessert biscuit gummi bears sugar plum cake. Tootsie roll sugar plum bear claw chocolate
-                bar
-                gummies pudding powder danish caramels. Bear claw biscuit lemon drops croissant gummi bears. Lollipop
-                chupa
-                chups soufflé sweet roll soufflé biscuit bear claw wafer.
+              <?=$product_detail['content'];?>
               </p>
-              <p>
-                Liquorice candy cotton candy tootsie roll chupa chups jelly-o pastry croissant marshmallow. Gingerbread
-                tiramisu jelly. Cheesecake pudding marshmallow marshmallow candy donut donut chocolate cake gummies.
-                Macaroon
-                tootsie roll wafer ice cream. Icing cupcake pudding. Caramels topping cake caramels toffee sesame snaps
-                pie
-                halvah halvah. Sesame snaps toffee pudding macaroon soufflé sesame snaps. Topping lemon drops sweet roll
-                lollipop chocolate bar soufflé cotton candy carrot cake. Lollipop dragée cheesecake toffee donut
-                macaroon tart
-                marshmallow. Croissant jelly-o chocolate jujubes soufflé. Halvah sweet pastry apple pie cake. Powder
-                icing
-                bonbon candy canes. Cake toffee marshmallow chocolate cake candy canes.
-              </p>
-              <p>
-                Caramels macaroon lemon drops topping topping. Jelly muffin muffin sweet roll dragée gummi bears cake
-                wafer
-                apple pie. Pudding gingerbread oat cake. Jelly chocolate bar candy. Cotton candy macaroon jelly beans
-                caramels
-                sesame snaps chocolate caramels cheesecake icing. Oat cake chocolate cake halvah gingerbread. Icing
-                candy
-                marzipan. Powder dessert marzipan powder. Candy canes cake croissant jelly beans chupa chups chocolate
-                cake.
-                Jelly-o candy toffee caramels jelly-o marshmallow. Lollipop wafer caramels pudding. Icing gingerbread
-                halvah
-                chocolate bar caramels.
-              </p>
-              <p>
-                Pudding tootsie roll lollipop tiramisu chocolate oat cake carrot cake sweet roll powder. Powder
-                gingerbread
-                pie biscuit candy pie cookie toffee icing. Muffin muffin chocolate. Tiramisu ice cream jelly beans
-                jelly-o
-                tootsie roll. Cotton candy jujubes cupcake dragée bear claw muffin candy cake marshmallow. Tart halvah
-                marshmallow. Donut cake pie. Dragée dessert liquorice gummi bears. Jelly chupa chups sesame snaps bonbon
-                chocolate bar biscuit tootsie roll candy chocolate bar. Lemon drops halvah pastry. Tart donut halvah
-                pudding.
-                Caramels gummies caramels candy.
-              </p>
-              <br>
-              <h4>
-                Special Features :
-              </h4>
-              <ul>
-                <li>
-                  Jelly-o candy toffee caramels jelly-o marshmallow.
-                </li>
-                <li>
-                  Cotton candy jujubes cupcake.
-                </li>
-                <li>
-                  Donut cake pie.
-                </li>
-                <li>
-                  Dessert liquorice gummi bears.
-                </li>
-                <li>
-                  Lemon drops halvah pastry.
-                </li>
-              </ul>
             </div>
             <div aria-labelledby="review" class="tab-pane" id="ratings">
               <h2 class="my-1">

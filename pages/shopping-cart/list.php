@@ -57,107 +57,43 @@
 										<th>Action</th>
 									</tr>
 								</thead>
+
 								<tbody>
-									<tr>
-										<td>
-											<div class="product-img d-flex align-items-center">
-												<img class="img-fluid" src="app-assets/images/elements/fitbit-watch.png" alt="Card image cap">
-											</div>
-										</td>
-										<td>
-											<div class="product-title">Fitbit Alta HR Special Edition</div>
-											<div class="product-color"><strong>Color : </strong> Pink</div>
-											<div class="product-size"><strong>Size : </strong> Medium</div>
-										</td>
-										<td>
-											<div class="input-group">
-												<input type="text" class="text-center count touchspin" value="1" />
-											</div>
-										</td>
-										<td>
-											<div class="total-price">$250</div>
-										</td>
-										<td>
-											<div class="product-action">
-												<a href="#"><i class="ft-trash-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="product-img d-flex align-items-center">
-												<img class="img-fluid" src="./app-assets/images/elements/13.png" alt="Card image cap">
-											</div>
-										</td>
-										<td>
-											<div class="product-title">Mackbook pro 19''</div>
-											<div class="product-color"><strong>Color : </strong> Grey</div>
-											<div class="product-size"><strong>Size : </strong> Pro</div>
-										</td>
-										<td>
-											<div class="input-group">
-												<input type="text" class="text-center count touchspin" value="1" />
-											</div>
-										</td>
-										<td>
-											<div class="total-price">$1150</div>
-										</td>
-										<td>
-											<div class="product-action">
-												<a href="#"><i class="ft-trash-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="product-img d-flex align-items-center">
-												<img class="img-fluid" src="./app-assets/images/elements/vr.png" alt="Card image cap">
-											</div>
-										</td>
-										<td>
-											<div class="product-title">VR Headset</div>
-											<div class="product-color"><strong>Color : </strong> Grey</div>
-											<div class="product-size"><strong>Size : </strong> Freesize</div>
-										</td>
-										<td>
-											<div class="input-group">
-												<input type="text" class="text-center count touchspin" value="2" />
-											</div>
-										</td>
-										<td>
-											<div class="total-price">$350</div>
-										</td>
-										<td>
-											<div class="product-action">
-												<a href="#"><i class="ft-trash-2"></i></a>
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<td>
-											<div class="product-img d-flex align-items-center">
-												<img class="img-fluid" src="./app-assets/images/carousel/25.jpg" alt="Card image cap">
-											</div>
-										</td>
-										<td>
-											<div class="product-title">Smart Watch with LED</div>
-											<div class="product-color"><strong>Color : </strong> Black</div>
-											<div class="product-size"><strong>Size : </strong> Medium</div>
-										</td>
-										<td>
-											<div class="input-group">
-												<input type="text" class="text-center count touchspin" value="1" />
-											</div>
-										</td>
-										<td>
-											<div class="total-price">$700</div>
-										</td>
-										<td>
-											<div class="product-action">
-												<a href="#"><i class="ft-trash-2"></i></a>
-											</div>
-										</td>
-									</tr>
+									<!-- I'm here -->
+									<?php
+									if ($product_cart->rowCount() > 0) {
+										foreach ($product_cart as $row) { ?>
+											<tr>
+												<td>
+													<div class="product-img d-flex align-items-center">
+														<img class="img-fluid" src="pages/shop/images/<?=$row['img'];?>" alt="Card image cap">
+													</div>
+												</td>
+												<td>
+													<div class="product-title"><?=$row['title'];?> </div>
+													<div class="product-color"><strong>Color : </strong> <?=$row['colors'];?></div>
+													<div class="product-size"><strong>Size : </strong> <?=$row['size'];?></div> 
+												</td>
+												<td>
+													<div class="input-group">
+														<input type="text" class="text-center count touchspin" value="1" />
+													</div>
+												</td>
+												<td>
+													<div class="total-price"><?=$row['price'];?></div>
+												</td>
+												<td>
+													<div class="product-action">
+														<a href="#"><i class="ft-trash-2"></i></a>
+													</div>
+												</td>
+											</tr>
+											<?php
+										}
+									} else {
+										echo "No data found";
+									}
+									?>
 								</tbody>
 							</table>
 						</div>
@@ -231,7 +167,7 @@
 							<ul class="list-group mb-3">
 								<li class="list-group-item d-flex justify-content-between lh-condensed">
 									<div>
-										<h6 class="my-0">Fitbit Alta HR Special Edition x 1</h6>
+										<h6 class="my-0"><?=$row['title'];?></h6>
 										<small class="text-muted">Brief description</small>
 									</div>
 									<span class="text-muted">$250</span>
@@ -503,7 +439,7 @@
 								</div>
 							</div>
 							<div class="order-details">
-								<h6 class="my-0">Fitbit Alta HR Special Edition x 1</h6>
+								<h6 class="my-0"><?=$row['title'];?></h6>
 								<small class="text-muted">Brief description</small>
 							</div>
 							<div class="order-details">
