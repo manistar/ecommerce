@@ -11,6 +11,61 @@
             $page = htmlspecialchars($_GET['p']);
         }
 
+    $billing_address = [
+        "ID"=>['unique'=>"", 'input_type'=>'hidden'],
+        "first_name"=>[
+        "title"=> "First Name",
+        "class"=> "",
+        "placeholder"=>"Enter your First Name",
+        "is_required"=>true, 
+        "input_type"=>"text", 
+        "type"=>"input",
+        ],
+
+        "last_name"=>[
+        "title"=> "Last Name",
+        "class"=> "",
+        "placeholder"=>"Enter your Last Name",
+        "is_required"=>true, 
+        "input_type"=>"text", 
+        "type"=>"input",
+        ],
+
+        "username"=>[
+        "title"=> "Username",
+        "class"=> "",
+        "placeholder"=>"Username Field",
+        "is_required"=>true, 
+        "input_type"=>"text", 
+        "type"=>"input",
+        ],
+
+        "email"=>[
+            "input_type"=>"email", "unique"=>""
+        ],
+
+        "address"=>[
+        "title"=>"Address",
+        "class"=> "",
+        "placeholder"=> "325 New York",
+        "is_required"=>true, 
+        "input_type"=>"text", 
+        "type"=>"input",
+        ],
+
+        "country"=>[
+            "title"=>"Country",
+            "class"=>"",
+            "placeholder"=>"Select your Country",
+            "is_required"=>true, 
+            "options"=>["United State"=>"United State", 
+            "Nigeria"=>"Nigeria"], 
+            "type"=>"select",
+        ],
+
+    ];
+
+
     $users_form = [
         "ID"=>["unique"=>"", "input_type"=>"hidden"],
         "full_name"=>[
@@ -30,10 +85,11 @@
         "input_data"=>["ID"=>uniqid()],
     ];
 
+
     $d->create_table("users", $users_form);
     // $userID = "68734855532";
     $product_data = $d->getall("products", fetch: "moredetails");
-    $product_cart = $d->getall("products", "ID = ?", [$ID], fetch: "moredetails");
+    // $product_cart = $d->getall("products", "ID = ?", [$ID], fetch: "moredetails");
     // var_dump($product_data->rowCount());
     if(isset($_GET['ID'])){
         $product_id = $_GET['ID'];

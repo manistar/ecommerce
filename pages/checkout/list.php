@@ -306,29 +306,20 @@
 						</div>
 					</form>
 				</div>
-				<div class="col-md-8 order-md-1">
+				
+					
+		   <div class="col-md-8 order-md-1">
 					<div class="card">
 						<div class="card-header">
 							<h4 class="card-title">Billing address</h4>
 						</div>
+						
 						<div class="card-content">
 							<div class="card-body">
 								<form class="needs-validation" novalidate="">
 									<div class="row">
-										<div class="col-md-6 mb-3">
-											<label for="firstName">First name</label>
-											<input type="text" class="form-control" id="firstName" placeholder="" value="" required="">
-											<div class="invalid-feedback">
-												Valid first name is required.
-											</div>
-										</div>
-										<div class="col-md-6 mb-3">
-											<label for="lastName">Last name</label>
-											<input type="text" class="form-control" id="lastName" placeholder="" value="" required="">
-											<div class="invalid-feedback">
-												Valid last name is required.
-											</div>
-										</div>
+						<?php echo $c->create_form($billing_address); ?>
+										
 									</div>
 
 									<div class="mb-3">
