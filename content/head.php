@@ -1,16 +1,5 @@
 <!DOCTYPE html>
-<!--
-Template Name: Modern Admin - Clean Bootstrap 4 Dashboard HTML Template
-Author: PixInvent
-Website: http://www.pixinvent.com/
-Contact: hello@pixinvent.com
-Follow: www.twitter.com/pixinvents
-Like: www.facebook.com/pixinvents
-Purchase: https://1.envato.market/modern_admin
-Renew Support: https://1.envato.market/modern_admin
-License: You must have a valid license purchased only from themeforest(the above link) in order to legally use the theme for your project.
 
--->
 <html class="loading" lang="en" data-textdirection="ltr">
   <!-- BEGIN: Head-->
   
@@ -27,6 +16,14 @@ License: You must have a valid license purchased only from themeforest(the above
     <link rel="shortcut icon" type="image/x-icon" href="https://demos.pixinvent.com/modern-html-admin-template/app-assets/images/ico/favicon.ico">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="./app-assets/fonts/material-icons/material-icons.min.css">
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+
+    <!-- This sorted out the missing icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+   <!-- End of Material Icon -->
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="./app-assets/vendors/css/material-vendors.min.css">
@@ -57,5 +54,13 @@ License: You must have a valid license purchased only from themeforest(the above
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <!-- END: Custom CSS-->
+
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+<style>
+circular_image { 
+  border-radius:50%;
+}
+</style>
+  
 
   </head>

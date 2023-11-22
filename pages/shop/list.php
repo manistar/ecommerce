@@ -43,8 +43,8 @@
 							<span class="float-right">
 								<span class="result-text mr-1"> Showing 12 of 203 results</span>
 								<span class="display-buttons">
-									<a href="#" class="active"><i class="ft-grid font-medium-2"></i></a>
-									<a href="#"><i class="ft-list font-medium-2"></i></a>
+									<a href="#" class="active"><i class="fas fa-grip-vertical"></i></a>
+									<a href="#"><i class="fas fa-list font-medium-2"></i></a>
 								</span>
 							</span>
 						</div>
@@ -54,7 +54,9 @@
 					<div class="row match-height">
 						<?php
 						if ($product_data->rowCount() > 0) {
-							foreach ($product_data as $row) { ?>
+							foreach ($product_data as $row) {
+								// (int)$amount
+								?>
 								<div class="col-xl-4 col-lg-6 col-md-6 col-sm-6">
 									<div class="card pull-up">
 										<div class="card-content">
@@ -81,19 +83,29 @@
 														<span class="ratings float-right"></span>
 													</div>
 												</a>
-												<div class="product-action d-flex justify-content-around">
-													<a href="#like" data-toggle="tooltip" data-placement="top"
-														title="Add To Wishlist"><i class="ft-heart"></i></a><span
-														class="saperator">|</span>
-													<a href="#view" data-toggle="tooltip" data-placement="top"
-														title="Quick View"><i class="ft-eye"></i></a><span
-														class="saperator">|</span>
-													<a href="#compare" data-toggle="tooltip" data-placement="top"
-														title="Compare"><i class="ft-sliders"></i></a><span
-														class="saperator">|</span>
-													<a href="#cart" data-toggle="tooltip" data-placement="top"
-														title="Add To Cart"><i class="ft-shopping-cart"></i></a>
-												</div>
+												<form action="" id="foo">
+															<?php 
+															$add_cart['input_data']['productID'] = $row['ID'];
+															$add_cart['input_data']['no_product'] = $s->get_no_of_product_in_cart($adminID, $row['ID']);
+															echo $c->create_form($add_cart); ?>
+															<input type="hidden" name="add_to_cart" value="">
+															<input type="hidden" name="page" value="shop">
+															<div class="product-action d-flex justify-content-around">
+																<a href="" data-toggle="tooltip" data-placement="top"
+																title="Add To Wishlist"><i class="fas fa-heart"></i></a><span
+																class="saperator">|</span>
+																<a href="#view" data-toggle="tooltip" data-placement="top"
+																title="Quick View"><i class="fas fa-eye"></i></a><span
+																class="saperator">|</span>
+																<a href="#compare" data-toggle="tooltip" data-placement="top"
+																title="Compare"><i class="fas fa-sliders-h"></i></a><span
+																class="saperator">|</span>
+																<div id="custommessage"></div>
+																<button type="submit" data-toggle="tooltip" data-placement="top" id="addToWishlist"
+																title="Add To Cart"><i class="fas fa-shopping-cart"></i></button>
+																
+															</div>
+														</form>	
 											</div>
 										</div>
 									</div>
@@ -142,9 +154,10 @@
 				<div class="sidebar-content d-none d-lg-block sidebar-shop">
 					<div class="card">
 						<div class="card-body">
-							<div class="search">
-								<input id="basic-search" type="text" placeholder="Search here..." class="basic-search">
-								<i class="ficon ft-search"></i>
+							<div class="search"> 
+								<input type="text" class="basic-search" oninput="search(this.value, 'showresult')" placeholder="Search here...">
+								<div id="showresult"></div>
+								<i class="fas fa-search"></i>
 							</div>
 						</div>
 					</div>

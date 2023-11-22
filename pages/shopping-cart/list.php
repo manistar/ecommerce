@@ -61,8 +61,11 @@
 								<tbody>
 									<!-- I'm here -->
 									<?php
+									
 									if ($product_cart->rowCount() > 0) {
-										foreach ($product_cart as $row) { ?>
+										foreach ($product_cart as $row) {
+											// $d->getall("products", "ID = ?", [$productID], fetch: "details");
+											?>
 											<tr>
 												<td>
 													<div class="product-img d-flex align-items-center">

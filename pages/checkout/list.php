@@ -318,43 +318,9 @@
 							<div class="card-body">
 								<form class="needs-validation" novalidate="">
 									<div class="row">
-						<?php echo $c->create_form($billing_address); ?>
-										
-									</div>
-
-									<div class="mb-3">
-										<label for="username">Username</label>
-										<div class="input-group">
-											<div class="input-group-prepend">
-												<span class="input-group-text">@</span>
-											</div>
-											<input type="text" class="form-control" id="username" placeholder="Username" required="">
-											<div class="invalid-feedback">
-												Your username is required.
-											</div>
-										</div>
-									</div>
-
-									<div class="mb-3">
-										<label for="email">Email <span class="text-muted">(Optional)</span></label>
-										<input type="email" class="form-control" id="email" placeholder="you@example.com">
-										<div class="invalid-feedback">
-											Please enter a valid email address for shipping updates.
-										</div>
-									</div>
-
-									<div class="mb-3">
-										<label for="address">Address</label>
-										<input type="text" class="form-control" id="address" placeholder="1234 Main St" required="">
-										<div class="invalid-feedback">
-											Please enter your shipping address.
-										</div>
-									</div>
-
-									<div class="mb-3">
-										<label for="address2">Address 2 <span class="text-muted">(Optional)</span></label>
-										<input type="text" class="form-control" id="address2" placeholder="Apartment or suite">
-									</div>
+						<?php 
+						echo $c->create_form($billing_address); ?>			
+					</div>
 
 									<div class="row">
 										<div class="col-md-5 mb-3">

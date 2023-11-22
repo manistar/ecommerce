@@ -178,6 +178,7 @@ class database
     // $update = $d->update("members", ["firstname"=>"tunde", "email"=>"tunde@gmail.com"], "ID = '4'");
     function update($what, $data, $where, $message = null)
     {
+        // $uo
         $this->get_index_data($data, "update");
         $query = $this->db->prepare("UPDATE $what SET $this->index WHERE $where");
         $update = $query->execute($this->data);
@@ -505,7 +506,9 @@ class database
             }
             if ($check > 0) {
                 $error = true;
-                echo $this->message("This exact ".$this->clean_str($what)." already exist", "error");
+                if($what != "cart") {
+                    echo $this->message("This exact ".$this->clean_str($what)." already exist", "error");
+                }
                 $check = null;
             }
         }
@@ -996,8 +999,49 @@ class database
         return $hold;
     }
 
-    function loadpage($url) {
+    function loadpage($url, $type = "normal") {
+        if($type == "json") {
+            $json = ["function"=>["loadpage", "data"=>[$url, ""]]];
+            return json_encode($json);
+        }
         echo '<script>window.location.href = "'.$url.'";</script>';
+    }
+
+    protected function tokengen(){
+        $token =  openssl_random_pseudo_bytes(19);
+        return $token = bin2hex($token);
+    }
+    protected function updateadmintoken($id, $name){
+        $d = new database;
+        $token = $this->tokengen();
+        $where = "ID ='$id'";
+        $update = $this->update("$name", ["token"=>"$token"], $where);   
+       if($update){
+          // session_start();
+           $_SESSION['usertoken'] = $token;
+        return $token;
+       }else{
+           return "";
+       }
+       
+    }
+
+    public function verifytoken($id, $name){
+        $d = new database;
+        $verify = $d->getall("$name", "ID = ?", [$id], fetch:"details");
+        if(is_array($verify) && isset($_SESSION['usertoken'])){
+            $token = $verify['token'];
+            if($token == htmlspecialchars($_SESSION['usertoken'])){
+                $update = $d->updateadmintoken($id, $name);
+                if($update != ""){
+                    return true;
+                } 
+            }else{
+                return false;
+            }
+        }else{
+            return false;
+        }
     }
 
     function ago($time)
@@ -1045,4 +1089,7 @@ class database
 
         return $shortenedText;
     }
+
+    
 }
+?>

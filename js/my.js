@@ -46,6 +46,8 @@ function copytext(text) {
     }
   }
 
+ 
+
 // Function to get the value of a cookie by name
 function getCookieValue(cookieName) {
     const cookies = document.cookie.split(';');
@@ -730,3 +732,23 @@ function change_profile(id) {
         }
     });
 }
+
+// Check ../passer.php
+function search(key, contentshow) {
+    document.getElementById(contentshow).innerHTML = "Loading...";
+    $.ajax({
+        type: 'post',
+        url: 'passer',
+        data: {
+            searchkey: key,
+        },
+        success: function (response) {
+            document.getElementById(contentshow).innerHTML = response;
+
+        }
+    });
+}
+
+//Below is the code for Cart function process
+
+

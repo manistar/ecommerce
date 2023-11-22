@@ -5,20 +5,25 @@
 // $redirect= "https://".$_SERVER[‘HTTP_HOST’].$_SERVER[‘REQUEST_URI’];
 // header("Location:$redirect");
 // }
-    if(!isset($_SESSION['userSession']) ){
-        header('location: login.php'); 
+    if(!isset($_SESSION['adminSession']) ){
+        header('location: login.php');
     }
     
     if(isset($_GET['logout'])) {
         session_destroy();
-        unset($_SESSION['userSession']);
+        unset($_SESSION['adminSession']);
         header("location: login.php");
-    }
+        }
     
-    if(isset($_SESSION['userSession'])){
-        $userID = $_SESSION['userSession'];
+    if(isset($_SESSION['adminSession'])){
+         $adminID = $_SESSION['adminSession'];
+        session_regenerate_id();
     }else{
         session_destroy();
         header("location: login.php");
     }
+// echo $adminID;
+
+ 
+    
 ?>
