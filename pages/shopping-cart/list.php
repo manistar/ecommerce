@@ -53,6 +53,7 @@
 										<th>Product</th>
 										<th>Details</th>
 										<th>No. Of Products</th>
+										<th>Amount</th>
 										<th>Total</th>
 										<th>Action</th>
 									</tr>
@@ -64,26 +65,30 @@
 									
 									if ($product_cart->rowCount() > 0) {
 										foreach ($product_cart as $row) {
+											$carting = $d->getall("products", "ID = ?", [$row['productID']]);
 											// $d->getall("products", "ID = ?", [$productID], fetch: "details");
 											?>
 											<tr>
 												<td>
 													<div class="product-img d-flex align-items-center">
-														<img class="img-fluid" src="pages/shop/images/<?=$row['img'];?>" alt="Card image cap">
+														<img class="img-fluid" src="pages/shop/images/<?=$carting['img'];?>" alt="Card image cap">
 													</div>
 												</td>
 												<td>
-													<div class="product-title"><?=$row['title'];?> </div>
-													<div class="product-color"><strong>Color : </strong> <?=$row['colors'];?></div>
-													<div class="product-size"><strong>Size : </strong> <?=$row['size'];?></div> 
+													<div class="product-title"><?=$carting['title'];?> </div>
+													<div class="product-color"><strong>Color : </strong> <?=$carting['colors'];?></div>
+													<div class="product-size"><strong>Size : </strong> <?=$carting['size'];?></div> 
 												</td>
 												<td>
 													<div class="input-group">
-														<input type="text" class="text-center count touchspin" value="1" />
+														<input type="text" class="text-center count touchspin" value="<?= $row['no_product'] ?>" />
 													</div>
 												</td>
 												<td>
-													<div class="total-price"><?=$row['price'];?></div>
+													<div class="total-price">$ <?= number_format(substr($carting['price'], 1)); ?></div>
+												</td>
+												<td>
+													<div class="total-price">$ <?= number_format(substr($carting['price'], 1) * $row['no_product']); ?></div>
 												</td>
 												<td>
 													<div class="product-action">
@@ -149,8 +154,8 @@
 							<div class="card-content">
 								<div class="card-body">
 									<div class="text-right">
-										<a href="ecommerce-checkout.html" class="btn btn-info mr-2">Continue Shopping</a>
-										<a href="ecommerce-checkout.html" class="btn btn-warning">Place Order</a>
+										<a href="?p=checkout" class="btn btn-info mr-2">Continue Shopping</a>
+										<a href="?p=checkout" class="btn btn-warning">Place Order</a>
 									</div>
 								</div>
 							</div>

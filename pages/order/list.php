@@ -503,8 +503,8 @@
 						<a href="#" class="btn btn-info">#CV45632</a>
 					</div>
 					<div class="float-right">
-						<a href="#" class="btn btn-outline-info mr-1"><i class="la la-question"></i> Need Help</a>
-						<a href="#" class="btn btn-outline-info"><i class="la la-map-marker"></i> Track</a>
+						<a href="#" class="btn btn-outline-info mr-1"><i class="fa fa-question"></i> Need Help</a>
+						<a href="#" class="btn btn-outline-info"><i class="fa fa-map-marker"></i> Track</a>
 					</div>
 				</div>
 				<div class="card-content">
@@ -546,8 +546,8 @@
 						<a href="#" class="btn btn-info">#CV65472</a>
 					</div>
 					<div class="float-right">
-						<a href="#" class="btn btn-outline-info mr-1"><i class="la la-question"></i> Need Help</a>
-						<a href="#" class="btn btn-outline-info"><i class="la la-map-marker"></i> Track</a>
+						<a href="#" class="btn btn-outline-info mr-1"><i class="fa fa-question"></i> Need Help</a>
+						<a href="#" class="btn btn-outline-info"><i class="fa fa-map-marker"></i> Track</a>
 					</div>
 				</div>
 				<div class="card-content">
@@ -589,8 +589,8 @@
 						<a href="#" class="btn btn-info">#CV78645</a>
 					</div>
 					<div class="float-right">
-						<a href="#" class="btn btn-outline-info mr-1"><i class="la la-question"></i> Need Help</a>
-						<a href="#" class="btn btn-outline-info"><i class="la la-map-marker"></i> Track</a>
+						<a href="#" class="btn btn-outline-info mr-1"><i class="fa fa-question"></i> Need Help</a>
+						<a href="#" class="btn btn-outline-info"><i class="fa fa-map-marker"></i> Track</a>
 					</div>
 				</div>
 				<div class="card-content">
@@ -632,8 +632,8 @@
 						<a href="#" class="btn btn-info">#CV84123</a>
 					</div>
 					<div class="float-right">
-						<a href="#" class="btn btn-outline-info mr-1"><i class="la la-question"></i> Need Help</a>
-						<a href="#" class="btn btn-outline-info"><i class="la la-map-marker"></i> Track</a>
+						<a href="#" class="btn btn-outline-info mr-1"><i class="fas fa-question"></i> Need Help</a>
+						<a href="#" class="btn btn-outline-info"><i class="fas fa-map-marker"></i> Track</a>
 					</div>
 				</div>
 				<div class="card-content">

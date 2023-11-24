@@ -10,6 +10,7 @@
 
 
     <!-- BEGIN Vendor JS-->
+   
     <script src="js/my.js"></script>
     <!-- BEGIN: Page Vendor JS-->
     <script src="./app-assets/vendors/js/charts/chart.min.js"></script>//

@@ -46,16 +46,22 @@ density_small
     </div>
 <!-- start -->
     <div class="navbar-container content">
-      <div class="collapse navbar-collapse" id="navbar-mobile">
+      <div class="collapse navbar-collapse" id="navbar-mobile"> 
         <ul class="nav navbar-nav mr-auto float-left">
           <!-- <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle" href="#"><i class="material-icons"></i></a></li> -->
           <li class="nav-item nav-search"><a class="nav-link nav-link-search" href="#"><i class="material-icons">search</i></a>
                 <div class="search-input">
-                  <input class="input round form-control search-box" type="text" placeholder="Explore Modern Admin" tabindex="0" data-search="template-list">
+
+                <!-- <input type="text" class="basic-search" oninput="search(this.value, 'showresult')" placeholder="Search here..."> -->
+								<!-- <div id="showresult"></div> -->
+
+                  <input class="input round form-control search-box" type="text" placeholder="Search Items" tabindex="0" data-search="template-list">
                   <div class="search-input-close"><i class="ft-x"></i></div>
                   <ul class="search-list"></ul>
                   <div class="dropdown-menu arrow">
                     <div class="dropdown-item">
+                    <!-- <input type="text" class="round form-controlbasic-search" oninput="search(this.value, 'showresult')" placeholder="Search Items"> -->
+								<!-- <div id="showresult"></div> -->
                       <input class="round form-control" type="text" placeholder="Search Here">
                     </div>
                   </div>
@@ -71,7 +77,8 @@ density_small
           <!-- Cart Icon -->
           <li class="dropdown dropdown-notification nav-item">
             <a class="nav-link nav-link-label" href="?p=shopping-cart">
-              <i class="fas fa-shopping-cart"></i>
+            <i class="material-icons" style="font-size: 35px;">shopping_cart</i>
+              <!-- <i class="fas fa-shopping-cart"></i> -->
               <span class="badge badge-pill badge-danger badge-up badge-glow" id="cat_no"><?= $s->no_products($adminID) ?></span>
             </a>
           <!-- End of Cart Icon -->
@@ -202,10 +209,10 @@ density_small
       </li>
       <!-- <li class=" nav-item"><a href="?p=product-details"><i class="material-icons">format_list_numbered</i><span class="menu-title" data-i18n="Product Detail">Product Detail</span></a> -->
       </li>
-      <li class=" nav-item"><a href="?p=shopping-cart"><i class="material-icons">card_travel</i><span class="menu-title" data-i18n="Shopping Cart">Shopping Cart</span></a>
+      <!-- <li class=" nav-item"><a href="?p=shopping-cart"><i class="material-icons">card_travel</i><span class="menu-title" data-i18n="Shopping Cart">Shopping Cart</span></a> -->
       </li>
-      <li class=" nav-item"><a href="?p=checkout"><i class="material-icons">local_atm</i><span class="menu-title" data-i18n="Checkout">Checkout</span></a>
-      </li>
+      <!-- <li class=" nav-item"><a href="?p=checkout"><i class="material-icons">local_atm</i><span class="menu-title" data-i18n="Checkout">Checkout</span></a>
+      </li> -->
       <li class=" nav-item"><a href="?p=order"><i class="material-icons">done</i><span class="menu-title" data-i18n="Order">Order</span></a>
       </li>
       <li class=" nav-item"><a href="#"><i class="material-icons">content_paste</i><span class="menu-title" data-i18n="Invoice">Invoice</span></a>
@@ -218,7 +225,11 @@ density_small
           </li>
         </ul>
       </li>
-      <li><a class="nav-item" href="index.php?logout"><i class="fa fa-power-off"></i><span data-i18n="logout">Logout</span></a>
+      <li><a class="nav-item" href="index.php?logout">
+     <span class="material-symbols-outlined">logout</span>
+      <!-- <i class="fa fa-power-off"></i> -->
+      <span data-i18n="logout">Logout</span>
+    </a>
           </li>
     </ul>
   </div>
