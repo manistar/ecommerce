@@ -1,4 +1,5 @@
 <?php 
+// admin login
 if(isset($_POST['adminlogin'])){
     require_once "include/auth-ini.php"; 
     // $loadpass = "Admin111@@@!.";
@@ -17,13 +18,16 @@ $a = new validate;
 if(isset($_POST['create_account'])) {
     echo $u->create_user($users_form);
 }
-// admin login
+
 if(isset($_POST['add_to_cart'])) {
 require_once "consts/shop.php";
  require_once "function/shop.php";
  $s = new shop;
  echo $s->add_to_cart($add_cart);
 }
+
+
+
 // Search Key
 if(isset($_POST['searchkey'])){
     $key = htmlspecialchars($_POST['searchkey']);

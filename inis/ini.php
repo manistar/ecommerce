@@ -137,4 +137,10 @@
         $product_id = $_GET['ID'];
         $product_detail = $d->getall("products", "ID = ?", [$product_id], fetch: "details");
     }
+
+// Delete Products
+    if(isset($_GET['p'])){
+        $product_id = $_GET['p'];
+        $delete_products = $d->delete("cart", "productID = ?", [$product_id]);
+    }
 ?>

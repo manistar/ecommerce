@@ -224,6 +224,23 @@ class database
         return true;
     }
 
+    // private function getmethod($q, $fetch)
+    // {
+    //     switch ($fetch) {
+    //         case 'details':
+    //             $data = $q->fetch(PDO::FETCH_ASSOC);
+    //             break;
+    //         case 'moredetails':
+    //             $data = $q;
+    //             break;
+
+    //         default:
+    //             $data = $q->rowCount();
+    //             break;
+    //     }
+    //     return $data;
+    // }
+
     private function getmethod($q, $fetch)
     {
         switch ($fetch) {
@@ -231,6 +248,9 @@ class database
                 $data = $q->fetch(PDO::FETCH_ASSOC);
                 break;
             case 'moredetails':
+                if($q->rowCount() == 0){
+                    return false;
+                }
                 $data = $q;
                 break;
 

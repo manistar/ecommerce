@@ -89,12 +89,7 @@ require_once "include/auth-ini.php";
                <!-- unset($users_form['ID']); -->
 
             <form action="passer" id="foo" onsubmit="return false">
-             
-            
             <?php echo $c->create_form($access_form); ?>
-
-           
-              
               <div class="form-group row">
                 <div class="col-sm-6 col-12 text-center text-sm-left pr-0">
                   <fieldset>
@@ -105,9 +100,11 @@ require_once "include/auth-ini.php";
                 <div class="col-sm-6 col-12 float-sm-left text-center text-sm-right" id="ForgotPass"><a href="html/ltr/recover-password.html"
                     class="card-link">Forgot Password?</a></div>
               </div>
+
               <input type="hidden" name="adminlogin" value="">
                 <div id="custommessage"></div>
-              <button type="submit" class="btn btn-outline-info btn-block" value="Submit"><i class="ft-unlock"></i> Login</button>
+              <button type="submit" class="btn btn-outline-info btn-block" value="Submit"><i class="fas fa-unlock"></i> Login</button>
+            
             </form>
 
           </div>

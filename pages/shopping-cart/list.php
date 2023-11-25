@@ -79,10 +79,12 @@
 													<div class="product-color"><strong>Color : </strong> <?=$carting['colors'];?></div>
 													<div class="product-size"><strong>Size : </strong> <?=$carting['size'];?></div> 
 												</td>
-												<td>
+												<td> 
 													<div class="input-group">
-														<input type="text" class="text-center count touchspin" value="<?= $row['no_product'] ?>" />
-													</div>
+													<!--  -->
+													<input type="number" class="text-center count touchspin" value="<?= $row['no_product'] ?>" />
+													
+														</div>
 												</td>
 												<td>
 													<div class="total-price">$ <?= number_format(substr($carting['price'], 1)); ?></div>
@@ -92,7 +94,7 @@
 												</td>
 												<td>
 													<div class="product-action">
-														<a href="#"><i class="ft-trash-2"></i></a>
+														<a href="?p=<?php echo $carting['ID'];?>&products&url=shopping-cart"><i class="fa fa-trash"></i></a>
 													</div>
 												</td>
 											</tr>

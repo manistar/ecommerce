@@ -84,7 +84,7 @@
 													</div>
 												</a>
 												<form action="" id="foo">
-															<?php 
+															<?php  
 															$add_cart['input_data']['productID'] = $row['ID'];
 															$add_cart['input_data']['no_product'] = $s->get_no_of_product_in_cart($adminID, $row['ID']);
 															echo $c->create_form($add_cart); ?>

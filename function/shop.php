@@ -15,7 +15,7 @@ class shop extends database {
 
     function no_products($userID) {
         return $this->getall("cart", "userID = ? and no_product > ?", [$userID, 0], fetch: "");
-    }
+    } 
 
     function get_no_of_product_in_cart($userID, $productID) {
         $data =  $this->getall("cart", "productID = ? and userID = ?", [$productID, $userID], "no_product");
