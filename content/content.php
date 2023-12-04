@@ -16,11 +16,16 @@ class content extends database
     //      "atb"=>"data-info='data'",
     //      "global_class"=>"add gloabl class",
     //     "placeholder"=>"Enter your full name", 
+
+    //     "description"=>"<a href='forgot.html'>Forgot Password ?</a>",
+    //      or
     //     "description"=>"Enter both first name and last name", 
+    
     //     "is_required"=>true, 
     //     "input_type"=>"text", 
     //     "type"=>"input",
     // ],
+    // "upload_image"=>["input_type"=>"file", "path"=>"upload/", "file_name"=>"profile_".$userID, "formart"=>["pdf", "doc", "php"]]
     //     "gender"=>["placeholder"=>"Select your gender", "is_required"=>true, "options"=>["Male"=>"Male", "Female"=>"Female"], "type"=>"input"],
     //     "tell_us_more"=>["placeholder"=>"Tell us more about your self", "is_required"=>false, "type"=>"textarea",],
     //     "input_data"=>["full_name"=>"seriki gbenga"],
@@ -44,7 +49,7 @@ class content extends database
             $this->data['star'] = "";
             $this->data["value"] = $this->get_value($datas, $key);
             if (!isset($this->data['global_class'])) {
-                $this->data['global_class'] = "col-md-6";
+                $this->data['global_class'] = "";
             }
             if (!isset($this->data['atb'])) {
                 $this->data['atb'] = "";
@@ -68,7 +73,11 @@ class content extends database
             if (!isset($this->data['placeholder'])) {
                 $this->data['placeholder'] = "Enter " . ucwords(str_replace("_", " ", $key));
                 if($this->data['type'] == "select"){
-                    $this->data['placeholder'] = "Select " . ucwords(str_replace("_", " ", $key));
+                    if(isset($data['title'])){
+                        $this->data['placeholder'] = $data['title'];
+                    }else{
+                        $this->data['placeholder'] = "Select " . ucwords(str_replace("_", " ", $key));
+                    }
                 }
             }
             if ($this->data['type'] == "input" && !isset($this->data['input_type'])) {
@@ -98,7 +107,7 @@ class content extends database
 
     function  get_header()
     {
-        $info =  "<div class='mb-3 form-group col-12 " . $this->data['global_class'] . "'>
+        $info =  "<div class='mb-3 form-group col-12 col-md-6 " . $this->data['global_class'] . "'>
         <label>" . ucwords($this->data['title']) . " <span class='text-danger'>" . $this->data['star'] . "</span></label>
         <div class='controls'>" . $this->placeholder;
         if (isset($this->data['description'])) {

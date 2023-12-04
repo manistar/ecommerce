@@ -24,7 +24,7 @@ require_once "consts/shop.php";
  require_once "function/shop.php";
  $s = new shop;
  echo $s->add_to_cart($add_cart);
-}
+} 
 
 
 

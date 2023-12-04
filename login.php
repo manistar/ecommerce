@@ -88,7 +88,7 @@ require_once "include/auth-ini.php";
 
                <!-- unset($users_form['ID']); -->
 
-            <form action="passer" id="foo" onsubmit="return false">
+            <form action="passer" id="foo" onsubmit="return false"> 
             <?php echo $c->create_form($access_form); ?>
               <div class="form-group row">
                 <div class="col-sm-6 col-12 text-center text-sm-left pr-0">

@@ -62,11 +62,13 @@
 								<tbody>
 									<!-- I'm here -->
 									<?php
-									
+									$total_cat = 0;
 									if ($product_cart->rowCount() > 0) {
 										foreach ($product_cart as $row) {
 											$carting = $d->getall("products", "ID = ?", [$row['productID']]);
 											// $d->getall("products", "ID = ?", [$productID], fetch: "details");
+											$total = substr($carting['price'], 1) * $row['no_product'];
+											$total_cat = $total_cat + $total;
 											?>
 											<tr>
 												<td>
@@ -90,11 +92,12 @@
 													<div class="total-price">$ <?= number_format(substr($carting['price'], 1)); ?></div>
 												</td>
 												<td>
-													<div class="total-price">$ <?= number_format(substr($carting['price'], 1) * $row['no_product']); ?></div>
+													<div class="total-price">$ <?= number_format($total); ?></div>
 												</td>
 												<td>
 													<div class="product-action">
-														<a href="?p=<?php echo $carting['ID'];?>&products&url=shopping-cart"><i class="fa fa-trash"></i></a>
+														<!-- <a href="?p=<?php echo $carting['ID'];?>&products&url=shopping-cart"><i class="fa fa-trash"></i></a> -->
+														<a href="?p=shopping-cart&pID=<?php echo $carting['ID'];?>&products"><i class="fa fa-trash"></i></a>
 													</div>
 												</td>
 											</tr>
@@ -142,7 +145,8 @@
 								<div class="price-detail">Delivery Charges <span class="float-right">$100</span></div>
 								<div class="price-detail">TAX / VAT <span class="float-right">$0</span></div>
 								<hr>
-								<div class="price-detail">Payable Amount <span class="float-right">$2900</span></div>
+								
+								<div class="price-detail">Payable Amount <span class="float-right">$ <?= number_format($total_cat); ?></span></div>
 								<div class="total-savings">Your Total Savings on this order $550</div>
 							</div>
 						</div>

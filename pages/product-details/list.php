@@ -151,49 +151,66 @@
               <div class="col-xl-3 col-lg-3 col-md-6 mb-1">
                 <div class="product-count pr-1">
                   <div class="input-group">
-                    <input class="text-center count touchspin" type="text" value="1" />
+                  <form action="" id="foo">
+                 <?php $add_cart['input_data']['productID'] = $product_detail['ID'];
+															$add_cart['input_data']['no_product'] = $s->get_no_of_product_in_cart($adminID, $product_detail['ID']);
+                              echo $c->create_form($add_cart); ?>
+                    <!-- <input class="text-center count touchspin" type="text" value="<?= $product_detail['no_product'] ?>" /> -->
+                    <input type="hidden" name="add_to_cart" value="">
+										<input type="hidden" name="page" value="shop">
+
                   </div>
                 </div>
               </div>
               <div class="col-xl-4 col-lg-4 col-md-6 mb-1">
                 <div class="options text-center d-flex justify-content-around">
+                
+															
                   <a data-placement="top" data-toggle="tooltip" href="#like" title="Add To Wishlist">
-                    <i class="ft-heart">
+                    <i class="fas fa-heart">
                     </i>
                   </a>
                   <span class="saperator">
                     |
                   </span>
                   <a data-placement="top" data-toggle="tooltip" href="#view" title="Quick View">
-                    <i class="ft-eye">
+                    <i class="fa fa-eye">
                     </i>
                   </a>
                   <span class="saperator">
                     |
                   </span>
                   <a data-placement="top" data-toggle="tooltip" href="#compare" title="Compare">
-                    <i class="ft-sliders">
+                    <i class="fas fa-sliders-h">
                     </i>
                   </a>
                   <span class="saperator">
                     |
                   </span>
-                  <a data-placement="top" data-toggle="tooltip" href="#cart" title="Add To Cart">
-                    <i class="ft-shopping-cart">
+     
+														
+                  <div id="custommessage"></div>
+                
+                           
+                  <button type="submit" data-placement="top" data-toggle="tooltip" title="Add To Cart">
+                    <i class="fa fa-shopping-cart">
                     </i>
-                  </a>
+                  </button>
+              
                 </div>
               </div>
               <div class="col-xl-5 col-lg-5 col-md-12">
                 <div class="product-buttons pl-2">
-                  <a class="btn btn-danger btn-sm" href="ecommerce-shopping-cart.html">
-                    <i class="la la-shopping-cart">
+                  <button type="submit" class="btn btn-danger btn-sm" href="">
+                    <i class="fa fa-shopping-cart">
                     </i>
                     Add
                     to Cart
-                  </a>
+                  </button>
+                 
+                </form>
                   <a class="btn btn-info btn-sm" href="ecommerce-checkout.html">
-                    <i class="la la-flash">
+                    <i class="fa fa-flash">
                     </i>
                     Buy Now
                   </a>
@@ -204,6 +221,8 @@
         </div>
       </div>
     </div>
+
+
     <div class="card">
       <div class="card-content">
         <div class="card-body">

@@ -6,6 +6,6 @@ $add_cart  = [
     "no_product"=>["input_type"=>"number", "title"=>"", "placeholder"=>"No of product", "is_required"=>false, "global_class"=>"col-12 w-100"],
     "input_data"=>["no_product"=>1, "userID"=>$adminID],
 ];
-
+ 
 // echo $add_cart['no_product']['input_type'];
 // $d->create_table("cart", $add_cart); 

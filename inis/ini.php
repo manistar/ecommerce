@@ -7,7 +7,7 @@
     require_once "function/shop.php";
     $s = new shop;
     $c = new content;
-    $d = new database;
+    $d = new database; 
 
     $page = "dashboard";
         if(isset($_GET['p'])) {
@@ -17,6 +17,7 @@
     $billing_address = [
         "ID"=>['unique'=>"", 'input_type'=>'hidden'],
         "first_name"=>[
+        "global_class" => "col-md-4",
         "title"=> "First Name",
         "class"=> "",
         "placeholder"=>"Enter your First Name",
@@ -61,7 +62,7 @@
 
         "country"=>[
             "title"=>"Country",
-            "global_class" => "col-md-4",
+            "global_class" => "col-md-3",
             "class"=>"",
             "placeholder"=>"Select your Country",
             "is_required"=>true, 
@@ -129,18 +130,23 @@
     $GetAdminProfile = $d->getall("admin", "ID = ?", [$adminID], fetch: "details");
 
     $product_data = $d->getall("products", fetch: "moredetails");
+    if(isset($_GET['pID'])){
+        $product_id = $_GET['pID'];
+        $delete_products = $d->delete("cart", "productID = ?", [$product_id]);
+    }
     $product_cart = $d->getall("cart", "userID = ?", [$userID], fetch: "moredetails");
     // $product_id = $d->getall("products", "productID = ?", [$userID], fetch: "moredetails");
     // var_dump($product_data->rowCount());
 
+    // $product_array = $_GET['ID'];
+    // $product_fetch_array = $d->getall("products", "ID = ?", [$product_array], fetch: "details");
+// 
     if(isset($_GET['ID'])){
         $product_id = $_GET['ID'];
         $product_detail = $d->getall("products", "ID = ?", [$product_id], fetch: "details");
     }
 
 // Delete Products
-    if(isset($_GET['p'])){
-        $product_id = $_GET['p'];
-        $delete_products = $d->delete("cart", "productID = ?", [$product_id]);
-    }
+    
+
 ?>
